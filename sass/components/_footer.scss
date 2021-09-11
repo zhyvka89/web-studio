@@ -1,0 +1,170 @@
+.footer {
+    background: $background-footer;
+    @extend %section-pudding-mobile;
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
+}
+
+.adrs-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.adrs-list p {
+    @include text-size (400, 14px, 1.7, 0.03em);
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $white-color;
+    font-style: normal;  
+}
+
+.adrs-link {
+    @include text-size (500, 14px, 1.1, 0.02em);
+    color: $footer-address-color;
+    font-style: normal;
+    transition: color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.adrs-item:not(:first-child) {
+    margin-top: 9px;
+}
+
+@media screen and (max-width: 767px) {
+    .footer-links {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+}
+
+.footer-links p {
+    @include text-size (700, 14px, 1.1, 0.03em);
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: $white-color;
+}
+
+.footer-list {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.footer-item .link {
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: $icon-background;
+    border-radius: 50%;
+    color: $white-color;
+    transition: background 250ms $timing-function;
+
+    &:hover {
+        background: $accent-color;
+    }
+}
+
+.footer-icon {
+    fill: currentColor;
+}
+
+.footer-form p {
+    @include text-size (700, 14px, 1.1, 0.03em);
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: $white-color;
+}
+
+.footer-input {
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 100%;
+    
+    height: 50px;
+    color: $white-color;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: $border-radius;
+    outline: none;
+}
+
+.form-button {
+    @extend %button-style;
+    display: inline-flex;
+    padding: 10px 28px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    transition: background 250ms $timing-function;
+
+    &:hover {
+        background: $secondary-accent-color;
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        margin-left: 10px;
+        width: 24px;
+        height: 24px;
+        background: url(../images/icon-send.svg);
+        background-size: contain;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .footer-main {
+        display:flex;
+        justify-content: space-around;
+        align-items: baseline;
+        margin-bottom: 60px;
+    }
+
+    .footer-adrs {
+        text-align: center;
+    }
+
+    .footer-links {
+        text-align: center;
+    }
+
+    .footer-form {
+        margin: auto;
+        width: 450px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .footer .container {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+
+    .footer-main {
+        display: flex;
+        align-items: baseline;
+    }
+
+    .footer-adrs{
+        margin-right: 70px;
+    }
+
+    .footer-input {
+        width: 358px;
+        margin-right: 12px;
+    }
+}

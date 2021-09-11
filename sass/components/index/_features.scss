@@ -1,0 +1,60 @@
+.features {
+    @extend %section-pudding-mobile;
+}
+
+.features-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    margin-bottom: 30px;
+    background: $secondary-background;
+}
+
+.features-item h3 {
+    @include text-size (700, 14px, 1.14, 00.03em);
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    
+    @media screen and (max-width:767px) {
+        text-align: center;
+    }
+}
+
+.features-item p {
+    @include text-size (400, 14px, 1.7, 00.03em);
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $secondary-text-color;
+}
+
+@media screen and (min-width: 768px) {
+    .features-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+
+    .features-item {
+        width: calc((100% - 2 * 30px) / 2);
+        margin: 15px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .features-item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .features {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+
+    .features-item {
+        width: 270px;
+    }
+}
